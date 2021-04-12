@@ -1,65 +1,41 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <div>
+      <p className="text-primaryGray  text-center md:text-4xl text-2xl   underline font-bold py-4">
+        Swaraj Pawar
+      </p>
+      <p className="text-darkGray items-center md:text-xl text-xs md:px-72 justify-center px-4">I'm Software Developer. I'm working on frontend and backend. I'm working on <span className="text-primaryGreen "> Spring Boot JPA, React NextJs, Tailwindcss and Android.</span>  I build things for web and android.</p>
+   
+    <div className="flex-none md:flex md:my-4 py-4 text-primaryGray px-4 md:px-12">
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      <div className="md:flex-1 rounded  border border-primaryGray my-4 md:my-0  md:px-10  md:py-4 md:mx-10"> 
+        <p className="text-lg text-primaryGreen font-semibold py-2 px-2">Web App Design</p>
+        <p className="text-darkGray text-sm md:text-base py-2 px-2"> Whether it's designing a new product or refreshing the design of an existing application, I'm happy to help making project beautiful and easy to use. </p>
+      </div>
+      
+      <div className="md:flex-1 rounded  border border-primaryGray md:px-10 md:py-4 md:mx-10 ">
+        <p className="text-lg text-primaryGreen font-semibold py-2 px-2">Front-end Development</p>
+        <p className="text-darkGray text-sm  md:text-base py-2 px-2">Modern browsers offer a lot of possibilities but also demand for specialized approach. I translate designs to production ready HTML, CSS and Javascript and <span className="text-primaryGreen">React</span> complete my frontend stack.</p>
+      </div>
+    
     </div>
-  )
+    
+    <div className="flex-none  md:flex md:my-4  text-primaryGray px-4 md:px-12">
+      <div className=" md:flex-1 rounded border border-primaryGray   md:px-10  md:py-4 md:mx-10"> 
+        <p className="text-lg text-primaryGreen font-semibold py-2 px-2">Mobile Design</p>
+        <p className="text-darkGray text-sm  md:text-base py-2 px-2"> I can developed and design mobile apps for android. I can use microservices for app devlopment. I used <span className="text-primaryGreen">Java</span>  for app development and design.
+        </p>
+      </div>
+
+      <div className=" md:flex-1 rounded  border border-primaryGray my-4 md:my-0 md:px-10  md:py-4 md:mx-10">
+      <p className="text-lg text-primaryGreen font-semibold py-2 px-2">Rest API's</p>
+      <p className="text-darkGray text-sm md:text-base py-2 px-2">I'm  using Rest Api's for backend development. I Prefered Java for backend. I used <span className="text-primaryGreen"> Spring Boot</span> framework  for developing microservices.</p>
+      </div>
+    </div>
+    </div>
+  );
 }
