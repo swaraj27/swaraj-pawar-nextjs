@@ -8,5 +8,5 @@ module.exports = {
 
     // assetPrefix : "/swaraj-pawar/",
 
-    basePath:"/swaraj-pawar"
+    // basePath:"/swaraj-pawar"
 }
