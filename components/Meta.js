@@ -9,6 +9,7 @@ const Meta = ({title,keywords}) => {
                 <meta charSet="utf-8"/>
                 <link rel="icon" href=""/>
                 <title>{title}</title>
+                
         </Head>
     );
 };

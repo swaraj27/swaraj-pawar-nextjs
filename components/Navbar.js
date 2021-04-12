@@ -89,7 +89,43 @@ export const Navbar = () => {
       </nav>
 
 
+        {/*Mobile Drawer  */}
+
+
+        <div
+        className={
+          navbarOpen
+            ? "z-10 absolute top-0 left-0 w-1/2 md:w-0 md:hidden bg-white shadow-xl h-screen bg-primaryBackround  overflow-hidden"
+            : "z-10 absolute top-0 left-0 w-0 md:w-0 md:hidden bg-white shadow-xl h-screen overflow-hidden"
+        }
+      >
+        <div className="bg-primaryOrange py-2 px-1">
+          <Link href="/">
+            <a>
+            <p className="text-sm text-primaryGreen font-semibold">Swaraj Pawar</p> 
+               <p className="text-xs text-darkGray"> Spring Boot | React NextJs</p>
+            </a>
+          </Link>
         </div>
+
+        <ul className="flex-col ml-2 px-2  overflow-hidden py-4 space-y-3 md:flex-row md:space-x-4">
+          {links.map((data, index) => {
+            return (
+              <li>
+                <Link key={index} href={data.path}>
+                  <a className="flex gap-1 items-center">
+                  <span className="text-primaryGreen px-1 text-xs">{data.id}</span>
+                  <span className="text-darkGray text-sm hover:text-primaryGreen">{data.title} </span>
+                  </a>
+                </Link>
+
+                
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </div>
     )
 }
 
