@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faBars} from '@fortawesome/free-solid-svg-icons';  
+import { faBars, faTimes} from '@fortawesome/free-solid-svg-icons';  
 
 const links = [
     {
@@ -51,7 +51,7 @@ export const Navbar = () => {
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
-              <FontAwesomeIcon icon={faBars} className="w-4" />
+              <FontAwesomeIcon icon={navbarOpen ? faTimes: faBars} className="w-4 text-primaryGreen" />
             </button>
           </div>
 
@@ -90,8 +90,6 @@ export const Navbar = () => {
 
 
         {/*Mobile Drawer  */}
-
-
         <div
         className={
           navbarOpen
@@ -99,7 +97,7 @@ export const Navbar = () => {
             : "z-10 absolute top-0 left-0 w-0 md:w-0 md:hidden bg-white shadow-xl h-screen overflow-hidden"
         }
       >
-        <div className="bg-primaryOrange py-2 px-1">
+        <div className="bg-primaryOrange py-4 px-1">
           <Link href="/">
             <a>
             <p className="text-sm text-primaryGreen font-semibold">Swaraj Pawar</p> 
@@ -113,9 +111,9 @@ export const Navbar = () => {
             return (
               <li>
                 <Link key={index} href={data.path}>
-                  <a className="flex gap-1 items-center">
-                  <span className="text-primaryGreen px-1 text-xs">{data.id}</span>
-                  <span className="text-darkGray text-sm hover:text-primaryGreen">{data.title} </span>
+                  <a className="flex flex-col gap-1 py-2 items-center">
+                  <p className="text-primaryGreen px-1 text-xs">{data.id}</p>
+                  <p className="text-darkGray text-sm hover:text-primaryGreen">{data.title} </p>
                   </a>
                 </Link>
 
