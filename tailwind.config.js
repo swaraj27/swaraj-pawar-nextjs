@@ -17,7 +17,6 @@ module.exports = {
   },
   variants: {
     extend: {
-      animation: ['responsive', 'motion-safe', 'motion-reduce']
     },
   },
   plugins: [],
