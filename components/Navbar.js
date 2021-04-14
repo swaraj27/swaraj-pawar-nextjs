@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faBars, faTimes} from '@fortawesome/free-solid-svg-icons';  
@@ -30,6 +30,7 @@ const links = [
 export const Navbar = () => {
 
     const [navbarOpen, setNavbarOpen] = React.useState(false)
+    const [effect, setEffect] = useState(false);
 
     return (
         <div>
@@ -47,11 +48,13 @@ export const Navbar = () => {
             </Link>
 
             <button
-              className="text-white cursor-pointer text-xl   leading-none block lg:hidden outline-none focus:outline-none"
+              className= "text-white cursor-pointer text-xl leading-none block lg:hidden  outline-none focus:outline-none"
               type="button"
-              onClick={() => setNavbarOpen(!navbarOpen)}
+              onClick={() => {setNavbarOpen(!navbarOpen);
+              }}
+              
             >
-              <FontAwesomeIcon icon={navbarOpen ? faTimes: faBars} className="w-4 text-primaryGreen" />
+              <FontAwesomeIcon icon={navbarOpen ? faTimes: faBars} className="w-4  text-primaryGreen" />
             </button>
           </div>
 
