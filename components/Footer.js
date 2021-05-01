@@ -6,10 +6,11 @@ import Link from "next/link"
 export const Footer = () => {
     return (
         <div>
-        <footer className="items-center">
+        <footer className="items-center pb-2">
           <p className="text-center text-darkGray text-xs py-2">Designed & Built by Swaraj Pawar</p>
-          <div className="flex justify-center py-1">
-          <div className="px-2 ">
+          <p className="text-xs  text-primaryGray text-center">Find Me Online or Get In  Touch</p>
+          <div className="flex justify-center  md:py-1 py-1">
+          <div className="px-2  ">
             <Link href="https://www.linkedin.com/in/swaraj-pawar-95405a124" passHref={true}>
               <FontAwesomeIcon icon={faLinkedin} className="w-4 hover:text-primaryGray text-primaryGreen" />
             </Link> 
@@ -24,6 +25,7 @@ export const Footer = () => {
                 <FontAwesomeIcon icon={faTwitter} className="w-4 hover:text-primaryGray text-primaryGreen" />
               </Link>
           </div>
+
           </div>
         </footer>
       </div>

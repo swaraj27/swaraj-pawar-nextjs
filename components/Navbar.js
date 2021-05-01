@@ -30,7 +30,6 @@ const links = [
 export const Navbar = () => {
 
     const [navbarOpen, setNavbarOpen] = React.useState(false)
-    const [effect, setEffect] = useState(false);
 
     return (
         <div>
@@ -102,6 +101,7 @@ export const Navbar = () => {
       >
         <div className="bg-primaryOrange py-4 px-1">
           <Link href="/">
+            
             <a>
             <p className="text-sm text-primaryGreen font-semibold">Swaraj Pawar</p> 
                <p className="text-xs text-darkGray"> Spring Boot | React NextJs</p>
