@@ -10,7 +10,7 @@ export const about = () => {
 
            
 
-            <div className="md:px-64  px-4">
+            <div className="md:px-64  px-4 ">
             <p className="text-darkGray   items-center justify-center md:text-xl text-sm    py-2">Hi, I'm Swaraj Pawar, 25 years old. living in Mumbai & working as Software Developer.</p>
             <p className="text-darkGray   items-center justify-center md:text-xl text-sm    py-2">After getting my Bachelors degree in Computer Engineering I decided to become a full-time full stack developer. Late 2019 , I began working as software developer at MTCLLP, a medical domain advertising agency.  </p>
             

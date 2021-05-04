@@ -6,10 +6,10 @@ import Meta from './Meta'
 const Layout = ({children}) => {
     return (
         <>
-        <div className="bg-primaryBackround">
+        <div className="bg-primaryBackround ">
         <Meta/>
         <Navbar/>
-        <div className="h-auto ">
+        <div className="h-full  py-4">
             <main>
                 {children}
             </main>
