@@ -1,39 +1,44 @@
-import React,{useState} from 'react';
-import Link from 'next/link';
-import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faBars, faTimes} from '@fortawesome/free-solid-svg-icons';  
+import React, { useState } from "react";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const links = [
-    {
-        id:"01.",
-        title:"Home",
-        path:"/",
-    },
-    {
-        id:"02.",
-        title:"Work",
-        path:"/work",
-    },
-    {
-        id:"03.",
-        title:"About",
-        path:"/about",
-    },
-    {
-        id:"04.",
-        title:"Contact",
-        path:"/contact",
-    }
-    
-]
+  {
+    id: "01.",
+    title: "Home",
+    path: "/",
+  },
+  {
+    id: "02.",
+    title: "Work",
+    path: "/work",
+  },
+  {
+    id: "03.",
+    title: "About",
+    path: "/about",
+  },
+  {
+    id: "04.",
+    title: "Contact",
+    path: "/contact",
+  },
+];
 
 export const Navbar = () => {
+  const [navbarOpen, setNavbarOpen] = React.useState(false);
 
-    const [navbarOpen, setNavbarOpen] = React.useState(false)
 
-    return (
-        <div>
-            <nav className="relative flex flex-wrap items-center justify-between text-white px-2 py-0 bg-primaryOrange">
+  const hideDrawer = (e) =>{
+    e.preventDefault();
+    console.log("inside drawer")
+    setNavbarOpen(false)
+  }
+
+  return (
+    <div>
+      <nav className="relative flex flex-wrap items-center justify-between text-white px-2 py-0 bg-primaryOrange">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between py-5 lg:w-auto lg:static lg:block lg:justify-start">
             <Link
@@ -41,19 +46,27 @@ export const Navbar = () => {
               className="text-sm font-bold leading-relaxed inline-block mr-4  whitespace-no-wrap uppercase text-black"
             >
               <a className="">
-                <p className="text-lg text-primaryGreen font-semibold">Swaraj Pawar</p> 
-               <p className="text-xs text-darkGray"> Spring Boot | React NextJs</p>
+                <p className="text-lg text-primaryGreen font-semibold">
+                  Swaraj Pawar
+                </p>
+                <p className="text-xs text-darkGray">
+                  {" "}
+                  Spring Boot | React NextJs
+                </p>
               </a>
             </Link>
 
             <button
-              className= "text-white cursor-pointer text-xl leading-none block lg:hidden  outline-none focus:outline-none"
+              className="text-white cursor-pointer text-xl leading-none block lg:hidden md:hidden outline-none focus:outline-none"
               type="button"
-              onClick={() => {setNavbarOpen(!navbarOpen);
+              onClick={() => {
+                setNavbarOpen(!navbarOpen);
               }}
-              
             >
-              <FontAwesomeIcon icon={navbarOpen ? faTimes: faBars} className="w-4  text-primaryGreen" />
+              <FontAwesomeIcon
+                icon={navbarOpen ? faTimes : faBars}
+                className="w-4  text-primaryGreen"
+              />
             </button>
           </div>
 
@@ -78,8 +91,12 @@ export const Navbar = () => {
                   >
                     <Link href={data.path}>
                       <a className="flex gap-1 items-center">
-                        <span className="text-primaryGreen px-1 text-xs">{data.id}</span>
-                        <span className="text-darkGray text-sm hover:text-primaryGreen">{data.title} </span>
+                        <span className="text-primaryGreen px-1 text-xs">
+                          {data.id}
+                        </span>
+                        <span className="text-darkGray text-sm hover:text-primaryGreen">
+                          {data.title}{" "}
+                        </span>
                       </a>
                     </Link>
                   </li>
@@ -90,9 +107,8 @@ export const Navbar = () => {
         </div>
       </nav>
 
-
-        {/*Mobile Drawer  */}
-        <div
+      {/*Mobile Drawer  */}
+      <div
         className={
           navbarOpen
             ? "z-10 absolute top-0 left-0 w-1/2 md:w-0 md:hidden bg-white shadow-xl h-screen bg-primaryBackround  overflow-hidden"
@@ -101,33 +117,37 @@ export const Navbar = () => {
       >
         <div className="bg-primaryOrange py-4 px-1">
           <Link href="/">
-            
             <a>
-            <p className="text-sm text-primaryGreen font-semibold">Swaraj Pawar</p> 
-               <p className="text-xs text-darkGray"> Spring Boot | React NextJs</p>
+              <p className="text-sm text-primaryGreen font-semibold">
+                Swaraj Pawar
+              </p>
+              <p className="text-xs text-darkGray">
+                
+                Spring Boot | React NextJs
+              </p>
             </a>
           </Link>
         </div>
 
-        <ul className="flex-col ml-2 px-2  overflow-hidden py-4 space-y-3 md:flex-row md:space-x-4">
+        <ul className="flex-col ml-2 px-2  overflow-hidden py-4 space-y-3 md:flex-row md:space-x-4" onClick={hideDrawer}>
           {links.map((data, index) => {
             return (
               <li>
-                <Link key={index} href={data.path}>
+                <Link key={index} href={data.path} >
                   <a className="flex flex-col gap-1 py-2 items-center">
-                  <p className="text-primaryGreen px-1 text-xs">{data.id}</p>
-                  <p className="text-darkGray text-sm hover:text-primaryGreen">{data.title} </p>
+                    <p className="text-primaryGreen px-1 text-xs">{data.id}</p>
+                    <p className="text-darkGray text-sm hover:text-primaryGreen">
+                      {data.title}
+                    </p>
                   </a>
                 </Link>
-
-                
               </li>
             );
           })}
         </ul>
       </div>
     </div>
-    )
-}
+  );
+};
 
 export default Navbar;

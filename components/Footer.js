@@ -7,7 +7,7 @@ export const Footer = () => {
     return (
         <div>
         <footer className="items-center pb-2">
-          <p className="text-center text-darkGray text-xs py-2">Designed & Built by Swaraj Pawar</p>
+          {/* <p className="text-center text-darkGray text-xs py-2">Designed & Built by Swaraj Pawar</p> */}
           <p className="text-xs  text-primaryGray text-center">Find Me Online or Get In  Touch</p>
           <div className="flex justify-center  md:py-1 py-1">
           <div className="px-2  ">
