@@ -9,7 +9,7 @@ const Layout = ({children}) => {
         <div className="bg-primaryBackround ">
         <Meta/>
         <Navbar/>
-        <div className="h-full  py-4">
+        <div className="h-full  ">
             <main>
                 {children}
             </main>

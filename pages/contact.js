@@ -9,7 +9,7 @@ export const contact = () => {
         Contact
       </p>
 
-      <div className="md:pb-10 md:pt-10 rounded border p-4 md:my-20 md:mx-64 m-4">
+      <div className="md:pb-10 md:pt-10 rounded border  p-4 md:my-20 md:mx-64 m-4">
         <p className="text-darkGray text-center md:text-xl text-sm">
           I am available for hire. Looking for better opportunity.
         </p>
