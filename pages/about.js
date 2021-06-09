@@ -2,7 +2,7 @@ import React from 'react'
 import Meta from "../components/Meta"
 export const about = () => {
     return (
-        <div>
+        <div className="h-screen md:h-full" >
             <Meta title="About-Swaraj Pawar"/>
             <p className="text-primaryGray  text-center md:text-4xl text-2xl underline  font-bold py-10">
                 About
