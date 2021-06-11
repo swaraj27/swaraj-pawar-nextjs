@@ -3,7 +3,7 @@ import Meta from "../components/Meta";
 
 export const contact = () => {
   return (
-    <div className="h-screen md:h-full">
+    <div className="h-screen md:h-screen">
       <Meta title="Contact-Swaraj Pawar" />
       <p className="text-primaryGray  text-center md:text-4xl text-2xl underline  font-bold py-10">
         Contact

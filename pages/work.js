@@ -13,7 +13,7 @@ const ProjectList = [
     {
         title:"Ad Mockup Tool",
         technology:"Next-js, ReactJs, Tailwindcss",
-        link:"https://www.virtuallyactual.com/admockup-next/"
+        link:"#"
     },
 
     {
@@ -24,7 +24,7 @@ const ProjectList = [
 
     {
         title:"Polls Application",
-        technology:"Spring Boot, Postgresql, Javascript, React js",
+        technology:"Spring Boot, Postgresql, React js",
         link:"#"
     },
 
@@ -36,7 +36,7 @@ const ProjectList = [
 
     {
         title:"Books Library Eccomerce Website",
-        technology:"Java, Spring, Hibernate, Jsp, H2-database",
+        technology:"Spring, Hibernate, Jsp, H2",
         link:"https://github.com/swaraj27/Book_Eccomerce"
     },
     {
@@ -53,7 +53,7 @@ export const work = () => {
             
         <div className="h-full md:h-screen">
             <Meta title="Work-Swaraj Pawar"/>
-            <p className="text-primaryGray  text-center md:text-4xl text-2xl  font-bold py-4">
+            <p className="text-primaryGray  text-center md:text-4xl text-2xl  underline font-bold py-4">
                 Work
             </p>
 
@@ -63,9 +63,9 @@ export const work = () => {
                         <div className="flex items-center justify-center w-full md:w-1/4 py-1"
                         key={index}>
                             <Link href={data.link}>
-                                <div className="border border-gray-400 w-full mx-1 px-2 py-10 cursor-pointer hover:no-underline text-center">
-                                <p className="text-xs font-semibold text-primaryGreen">{data.title}</p>
-                                <p className="text-sm md:text-sm text-darkGray">
+                                <div className="group border rounded border-gray-400 w-full mx-1 px-2 py-10 cursor-pointer  text-center hover:bg-primaryGray">
+                                <p className="text-xs font-semibold text-primaryGreen group-hover:text-primaryBackround">{data.title}</p>
+                                <p className="text-sm md:text-sm text-darkGray group-hover:text-primaryBackround">
                                 {data.technology}
                                 </p>
 

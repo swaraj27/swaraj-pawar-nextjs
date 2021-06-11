@@ -12,7 +12,7 @@ export default function Home() {
    
     <div className="flex-none md:flex md:my-4 py-4 text-primaryGray px-4 md:px-12">
 
-      <div className="md:flex-1 rounded  border border-primaryGray my-4 md:my-0  md:px-10  md:py-4 md:mx-10"> 
+      <div className="md:flex-1 rounded  border border-primaryGray my-4 md:my-0  md:px-10  md:py-4 md:mx-10 "> 
         <p className="text-lg text-primaryGreen font-semibold py-2 px-2">Web App Design</p>
         <p className="text-darkGray text-sm md:text-base py-2 px-2"> Whether it's designing a new product or refreshing the design of an existing application, I'm happy to help making project beautiful and easy to use. </p>
       </div>
